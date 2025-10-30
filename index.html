@@ -1,130 +1,163 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>이력서</title>
-    <style>
-        /* 기본 스타일 초기화 */
-        body, h1, h2, p, ul {
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Sans KR', sans-serif;
-            color: #333;
-        }
-        body {
-            background: #fff;
-            line-height: 1.6;
-            font-size: 16px;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        header img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-        h1 {
-            font-weight: 700;
-            font-size: 2.2rem;
-        }
-        section {
-            margin-bottom: 40px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        h2 {
-            font-weight: 600;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #222;
-            border-left: 5px solid #4a90e2;
-            padding-left: 10px;
-        }
-        ul {
-            list-style: none;
-        }
-        .tech-stack ul, .projects ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .tech-stack li, .projects li {
-            background: #f5f7fa;
-            color: #555;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        .contact-info {
-            font-size: 1rem;
-            color: #4a90e2;
-        }
-        /* 모바일 대응 */
-        @media (max-width: 600px) {
-            body {
-                padding: 15px;
-            }
-            header img {
-                width: 100px;
-                height: 100px;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
-            .tech-stack ul, .projects ul {
-                flex-direction: column;
-            }
-            .tech-stack li, .projects li {
-                width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이력서 | Your Name</title>
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --text: #222;
+      --accent: #0077ff;
+      --card-bg: #fff;
+      --border: #e0e0e0;
+      --font: 'Pretendard', 'Noto Sans KR', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin: 1rem 0 0.3rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem 4rem;
+    }
+
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: var(--accent);
+      font-size: 1.4rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* 반응형 */
+    @media (max-width: 600px) {
+      header img {
+        width: 90px;
+        height: 90px;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="images/profile.jpg" alt="프로필 이미지" />
-        <h1>홍길동</h1>
-        <p>간단한 소개 문구를 여기에 작성하세요.</p>
-    </header>
+  <header>
+    <img src="images/profile.jpg" alt="Profile Image" />
+    <h1>홍길동</h1>
+    <p>프론트엔드 개발자 | 기술로 문제를 해결하는 사람</p>
+  </header>
 
-    <section class="intro">
-        <h2>소개</h2>
-        <p>자신을 간단히 소개하는 글입니다. 경력과 성격, 목표 등을 작성할 수 있습니다.</p>
+  <main>
+    <section id="intro">
+      <h2>소개</h2>
+      <p>
+        안녕하세요. 사용자 중심의 인터페이스와 효율적인 코드 구조를 중요하게 생각하는
+        프론트엔드 개발자 홍길동입니다. 새로운 기술을 배우고, 그것을 실제 프로젝트에 적용해
+        가치를 만들어내는 것을 좋아합니다.
+      </p>
     </section>
 
-    <section class="tech-stack">
-        <h2>기술 스택</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-        </ul>
+    <section id="skills">
+      <h2>기술 스택</h2>
+      <ul>
+        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React</li>
+        <li><strong>Backend:</strong> Node.js, Express</li>
+        <li><strong>Tools:</strong> Git, Figma, VSCode</li>
+      </ul>
     </section>
 
-    <section class="projects">
-        <h2>프로젝트</h2>
-        <ul>
-            <li>프로젝트 1</li>
-            <li>프로젝트 2</li>
-            <li>프로젝트 3</li>
-        </ul>
+    <section id="projects">
+      <h2>프로젝트</h2>
+      <ul>
+        <li>
+          <strong>Portfolio Site</strong> — 개인 포트폴리오 웹사이트 제작  
+          <br /><a href="#">🔗 보기</a>
+        </li>
+        <li>
+          <strong>Todo App</strong> — React 기반 일정 관리 앱  
+          <br /><a href="#">🔗 보기</a>
+        </li>
+      </ul>
     </section>
 
-    <section class="contact">
-        <h2>연락처</h2>
-        <p class="contact-info">이메일: example@example.com</p>
-        <p class="contact-info">전화번호: 010-1234-5678</p>
+    <section id="contact">
+      <h2>연락처</h2>
+      <p>
+        📧 <a href="mailto:your@email.com">your@email.com</a><br />
+        🔗 <a href="https://github.com/yourname" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a>
+      </p>
     </section>
+  </main>
+
+  <footer>
+    © 2025 Hong Gil-dong. All rights reserved.
+  </footer>
 </body>
 </html>
